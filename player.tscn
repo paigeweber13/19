@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://assets/player/walk/02.png" type="Texture" id=2]
@@ -22,11 +22,7 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 107, -287, 107, 287, -107, 287, -30, -287 )
-
 [node name="player" type="Area2D"]
-position = Vector2( 291.877, 694.265 )
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -34,11 +30,9 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -0.0666504, -0.879028 )
 frames = SubResource( 1 )
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2( -0.0231934, 0.124756 )
-shape = SubResource( 2 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
+polygon = PoolVector2Array( 81.4053, -295.964, 105.009, -244.964, 110.615, -194.516, 91.9303, -179.569, 91.9303, -145.937, 65.7722, -138.463, 86.325, -0.198669, 95.6672, 293.146, -104.256, 293.146, -46.334, 70.8019, -63.15, -116.042, -42.5971, -160.884, -53.8078, -226.28, -13.0255, -274.042 )
