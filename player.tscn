@@ -18,21 +18,17 @@
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "default",
+"name": "walk",
 "speed": 8.0
 } ]
 
-[node name="player" type="Area2D"]
+[node name="player" type="KinematicBody2D"]
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 81.4053, -295.964, 105.009, -244.964, 110.615, -194.516, 91.9303, -179.569, 91.9303, -145.937, 65.7722, -138.463, 86.325, -0.198669, 91.6993, 274.979, 78.4003, 292.51, -95.6959, 292.51, -110.808, 276.793, -46.334, 70.8019, -63.15, -116.042, -42.5971, -160.884, -53.8078, -226.28, -13.0255, -274.042 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
-polygon = PoolVector2Array( 81.4053, -295.964, 105.009, -244.964, 110.615, -194.516, 91.9303, -179.569, 91.9303, -145.937, 65.7722, -138.463, 86.325, -0.198669, 95.6672, 293.146, -104.256, 293.146, -46.334, 70.8019, -63.15, -116.042, -42.5971, -160.884, -53.8078, -226.28, -13.0255, -274.042 )
+animation = "idle"
