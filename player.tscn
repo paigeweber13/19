@@ -24,7 +24,7 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 50.4504
-height = 460.827
+height = 446.636
 
 [node name="player" type="KinematicBody2D"]
 scale = Vector2( 0.3, 0.3 )
