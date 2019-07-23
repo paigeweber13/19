@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
-const GRAVITY_VEC = Vector2(0, 900)
+const GRAVITY_VEC = Vector2(0, 1600)
 const FLOOR_NORMAL = Vector2(0, -1)
 const SLOPE_SLIDE_STOP = 25.0
-const WALK_SPEED = 250 # pixels/sec
-const JUMP_SPEED = 480
+const WALK_SPEED = 500 # pixels/sec
+const JUMP_SPEED = 1100
 const SIDING_CHANGE_SPEED = 10
 const SHOOT_TIME_SHOW_WEAPON = 0.2
 
