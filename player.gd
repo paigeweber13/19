@@ -14,7 +14,7 @@ var linear_vel = Vector2()
 var anim = ""
 
 # cache the sprite here for fast access (we will set scale to flip it often)
-onready var sprite = $Sprite
+onready var sprite = $AnimatedSprite
 
 func get_input():
 	# Horizontal movement
@@ -48,19 +48,19 @@ func process_animation():
 
 	if on_floor:
 		if linear_vel.x < -SIDING_CHANGE_SPEED:
-			$AnimatedSprite.scale.x = -1
+			sprite.scale.x = -1
 			new_anim = "walk"
 
 		if linear_vel.x > SIDING_CHANGE_SPEED:
-			$AnimatedSprite.scale.x = 1
+			sprite.scale.x = 1
 			new_anim = "walk"
 	else:
 		# We want the character to immediately change facing side when the player
 		# tries to change direction, during air control.
 		if Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
-			$AnimatedSprite.scale.x = -1
+			sprite.scale.x = -1
 		if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
-			$AnimatedSprite.scale.x = 1
+			sprite.scale.x = 1
 
 		# Using "idle" as placeholder until I get new animations
 		if linear_vel.y < 0:
@@ -73,13 +73,13 @@ func process_animation():
 	if new_anim != anim:
 		anim = new_anim
 		if (anim == "idle"):
-			$AnimatedSprite.stop()
+			sprite.stop()
 		else:
-			$AnimatedSprite.play(anim)
+			sprite.play(anim)
 
 func _ready():
-	$AnimatedSprite.play("walk")
-	$AnimatedSprite.stop()
+	sprite.play("walk")
+	sprite.stop()
 	pass
 
 func _physics_process(delta):
