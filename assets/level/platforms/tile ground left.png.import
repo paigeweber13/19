@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/upper-ground-right.png-bdcffac8ee860694a7033bacc78adede.stex"
+path="res://.import/tile ground left.png-7dc92625daec716cf2d06b4b50a8995c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/platforms/upper-ground-right.png"
-dest_files=[ "res://.import/upper-ground-right.png-bdcffac8ee860694a7033bacc78adede.stex" ]
+source_file="res://assets/level/platforms/tile ground left.png"
+dest_files=[ "res://.import/tile ground left.png-7dc92625daec716cf2d06b4b50a8995c.stex" ]
 
 [params]
 

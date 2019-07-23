@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/floating-mid.png-f0e4cfa20a100ae1d8da02c64ce829a2.stex"
+path="res://.import/tile ground deep middle.png-e5b203747a45355239f558fb4c99c7b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/platforms/floating-mid.png"
-dest_files=[ "res://.import/floating-mid.png-f0e4cfa20a100ae1d8da02c64ce829a2.stex" ]
+source_file="res://assets/level/platforms/tile ground deep middle.png"
+dest_files=[ "res://.import/tile ground deep middle.png-e5b203747a45355239f558fb4c99c7b7.stex" ]
 
 [params]
 
