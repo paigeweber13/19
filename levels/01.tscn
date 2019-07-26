@@ -28,6 +28,4 @@ limit_bottom = 14500
 position = Vector2( 11091.4, 12637.4 )
 rotation = 0.417134
 scale = Vector2( 0.5, 10 )
-[connection signal="area_entered" from="Checkpoint" to="player" method="_on_Checkpoint_area_entered"]
-[connection signal="area_shape_entered" from="Checkpoint" to="player" method="_on_Checkpoint_area_shape_entered"]
-[connection signal="body_entered" from="Checkpoint" to="player" method="_on_Checkpoint_body_entered" binds= [ Vector2( 0, 0 ) ]]
+[connection signal="body_entered" from="Checkpoint" to="player" method="_on_Checkpoint_body_entered"]
