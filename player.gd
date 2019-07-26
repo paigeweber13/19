@@ -6,7 +6,7 @@ const GRAVITY_VEC = Vector2(0, 1600)
 const FLOOR_NORMAL = Vector2(0, -1)
 const SLOPE_SLIDE_STOP = 25.0
 const WALK_SPEED = 700 # pixels/sec
-const JUMP_SPEED = 1400
+const JUMP_SPEED = 1700
 const SIDING_CHANGE_SPEED = 10
 
 var on_floor
@@ -64,17 +64,15 @@ func process_animation():
 		if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
 			sprite.scale.x = 1
 
-		# Using "idle" as placeholder until I get new animations
 		if linear_vel.y < 0:
-			# new_anim = "jumping"
-			new_anim = "idle"
+			new_anim = "jump"
 		else:
-			# new_anim = "falling"
-			new_anim = "idle"
+			new_anim = "fall"
 
 	if new_anim != anim:
 		anim = new_anim
 		if (anim == "idle"):
+			sprite.play("walk")
 			sprite.stop()
 		else:
 			sprite.play(anim)
