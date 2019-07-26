@@ -25,9 +25,7 @@ current = true
 limit_bottom = 14500
 
 [node name="Checkpoint" parent="." instance=ExtResource( 3 )]
-position = Vector2( 11091.4, 12637.4 )
-rotation = 0.417134
-scale = Vector2( 0.5, 10 )
+position = Vector2( 10933.2, 12369.7 )
 
 [node name="Checkpoint2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 13421.9, 12369.2 )
