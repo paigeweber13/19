@@ -10,8 +10,8 @@
 [ext_resource path="res://assets/level/platforms/tile platform left.png" type="Texture" id=8]
 [ext_resource path="res://assets/level/platforms/tile platform middle.png" type="Texture" id=9]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 234.502, 72.9475, 196.887, 111.528, 0, 114.904, 0, 6.0751, 252.828, 8.08447 )
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 256, 0, 256, 64, 192, 128, 0, 128 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 256, 0, 256, 256, 0, 256 )
@@ -31,11 +31,11 @@ points = PoolVector2Array( 0, 0, 256, 0, 256, 256, 0, 256 )
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 256, 0, 256, 256, 0, 256 )
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
-points = PoolVector2Array( 3.88889, 7.36111, 256, 5.625, 256, 114.277, 68.125, 114.855, 33.9815, 85.3414, 0.995392, 29.7859 )
-
 [sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 0, 6.18674, 256, 5.62857, 256, 116.494, 0, 114.261 )
+points = PoolVector2Array( 0, 64, 0, 0, 256, 0, 256, 128, 64, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 0, 256, 0, 256, 128, 0, 128 )
 
 [resource]
 0/name = "tile platform right.png 0"
@@ -50,7 +50,7 @@ points = PoolVector2Array( 0, 6.18674, 256, 5.62857, 256, 116.494, 0, 114.261 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -162,7 +162,7 @@ points = PoolVector2Array( 0, 6.18674, 256, 5.62857, 256, 116.494, 0, 114.261 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/z_index = 0
@@ -178,7 +178,7 @@ points = PoolVector2Array( 0, 6.18674, 256, 5.62857, 256, 116.494, 0, 114.261 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 8/z_index = 0
