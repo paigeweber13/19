@@ -5,5 +5,7 @@ extents = Vector2( 500, 500 )
 
 [node name="Checkpoint" type="Area2D"]
 
+[node name="Position2D" type="Position2D" parent="."]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

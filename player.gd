@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+export var boundaries = {"top": -1000000, "right": 1000000, "bottom": 1000000, "left": -1000000}
+
 const GRAVITY_VEC = Vector2(0, 1600)
 const FLOOR_NORMAL = Vector2(0, -1)
 const SLOPE_SLIDE_STOP = 25.0
@@ -9,6 +11,7 @@ const SIDING_CHANGE_SPEED = 10
 
 var on_floor
 var linear_vel = Vector2()
+var last_checkpoint = Vector2()
 
 var anim = ""
 
@@ -75,13 +78,35 @@ func process_animation():
 			sprite.stop()
 		else:
 			sprite.play(anim)
+			
+func check_in_bounds():
+	if global_position.x > boundaries["right"]:
+		return false
+	elif global_position.x < boundaries["left"]:
+		return false
+	elif global_position.y < boundaries["top"]:
+		return false
+	elif global_position.y > boundaries["bottom"]:
+		return false
+	else:
+		return true
+		
+func die():
+	global_position = last_checkpoint
 
 func _ready():
 	sprite.play("walk")
 	sprite.stop()
-	pass
+	last_checkpoint = self.global_position
 
 func _physics_process(delta):
 	process_movement(delta)
 	process_animation()
+	if(!check_in_bounds()):
+		die()
 
+func _on_Checkpoint_body_entered(body):
+	# used because player is a KinematicBody2D, which inherits from
+	# PhysicsBody2D. Would be better if checkpoint was set to the checkpoint
+	# position but not sure how to do this now
+	last_checkpoint = body.global_position
