@@ -109,4 +109,5 @@ func _on_Checkpoint_body_entered(body):
 	# used because player is a KinematicBody2D, which inherits from
 	# PhysicsBody2D. Would be better if checkpoint was set to the checkpoint
 	# position but not sure how to do this now
-	last_checkpoint = body.global_position
+	if(on_floor):
+		last_checkpoint = body.global_position
