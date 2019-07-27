@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://cutscenes/ending.gd" type="Script" id=1]
-[ext_resource path="res://assets/cutscenes/intro.webm" type="VideoStream" id=2]
+[ext_resource path="res://assets/cutscenes/ending.webm" type="VideoStream" id=2]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
